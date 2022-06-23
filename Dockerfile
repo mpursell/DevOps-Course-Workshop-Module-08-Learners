@@ -5,19 +5,14 @@ COPY . /usr/src/app
 
 WORKDIR /usr/src/app/DotnetTemplate.Web
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x |\ 
+RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash - &&\
     apt-get install -y nodejs &&\
-    dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org &&\
     apt-get update &&\ 
     apt-get install -y build-essential &&\
-    npm install &&\
     npm install --save-dev jasmine &&\
-    npm run build
+    npm run build &&\
+    dotnet build
 
-WORKDIR /usr/src/app
+EXPOSE 5000
 
 ENTRYPOINT ["dotnet", "run"]
-    
-
-
-
