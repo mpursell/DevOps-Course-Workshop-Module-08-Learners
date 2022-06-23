@@ -37,7 +37,7 @@
     "eslint-plugin-jasmine": "^4.1.2",
     "fork-ts-checker-webpack-plugin": "^6.4.2",
     "glob": "7.1.6",
-    "jasmine": "^3.7.0",
+    "jasmine": "^3.99.0",
     "jasmine-parameterized": "^0.4.0",
     "jasmine-ts": "^0.3.3",
     "jsdom": "^16.5.2",
